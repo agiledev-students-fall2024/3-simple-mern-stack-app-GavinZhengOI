@@ -1,0 +1,13 @@
+.About {
+    text-align: center;
+    padding: 20px;
+}
+
+.About img {
+    max-width: 200px;
+    border-radius: 0; /* Set border-radius to 0 to make the frame rectangular */
+}
+
+.About p {
+    font-size: 1.2em;
+}
