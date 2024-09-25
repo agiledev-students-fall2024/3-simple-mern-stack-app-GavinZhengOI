@@ -22,6 +22,18 @@ mongoose
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
 
+app.get('/about', (req, res) => {
+  res.json({
+    name: "Zihan Zheng",
+    bio: [
+      "Hey, I’m Zihan Zheng! I’m a junior at NYU studying Computer Science and Mathematics. I’m really into playing around with home labs, experimenting with Kubernetes, Docker, and various automation setups—always trying to make things more efficient. I’m also super interested in the latest tech products, space exploration, and autonomous driving, especially Tesla’s Full Self-Driving (FSD) technology. I love keeping up with the cutting-edge of tech and innovation.",
+      "This past summer, I interned at NVIDIA, where I worked on the in-cabin Copilot system for their next-gen DRIVE Thor platform. It was an exciting project where I helped integrate voice features like ASR and TTS, optimized response times, and worked on a RAG pipeline. It was really cool to see how these technologies come together in autonomous driving systems.",
+      "On top of that, I’ve also competed in ICPC, where I placed 2nd in the Greater NY Regional Contest and went on to the North America Finals in 2023 and 2024. Competitive programming has been a huge part of my journey, and I love solving complex problems under pressure!"
+    ],
+    photoUrl: "/photo.jpg" // Update to use the local photo
+  });
+});
+
 // a route to handle fetching all messages
 app.get('/messages', async (req, res) => {
   // load all messages from database
